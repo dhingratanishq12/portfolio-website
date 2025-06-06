@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --gold: #d4af37;
+  --cream: #f5f0e5;
+  --dark-brown: #3a2a18;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-brown);
+  background-color: var(--cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Motion Graphics Animations - Enhanced Playful */
+.particle {
+  position: absolute;
+  width: 10px; /* Slightly larger */
+  height: 10px;
+  background: radial-gradient(circle, var(--gold) 10%, rgba(212, 175, 55, 0.3) 50%, rgba(212, 175, 55, 0) 70%);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.particle-1 { top: 10%; left: 15%; animation-name: float-playful, fade-playful; animation-duration: 12s, 12s; animation-delay: 0s; }
+.particle-2 { top: 30%; right: 10%; animation-name: float-playful, fade-playful; animation-duration: 15s, 15s; animation-delay: 2s; }
+.particle-3 { bottom: 15%; left: 25%; animation-name: float-playful, fade-playful; animation-duration: 18s, 18s; animation-delay: 1s; }
+.particle-4 { bottom: 35%; right: 20%; animation-name: float-playful, fade-playful; animation-duration: 14s, 14s; animation-delay: 3s; }
+.particle-5 { top: 50%; left: 40%; animation-name: float-playful, fade-playful; animation-duration: 16s, 16s; animation-delay: 2.5s; }
+.particle-6 { top: 70%; right: 30%; animation-name: float-playful, fade-playful; animation-duration: 13s, 13s; animation-delay: 1.5s; }
+
+/* Remove old fabric flow or keep if desired - removing for now */
+/* .fabric-flow { ... } */
+
+@keyframes float-playful {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(20px, -30px) rotate(45deg); }
+  50% { transform: translate(-15px, 10px) rotate(-30deg); }
+  75% { transform: translate(10px, 25px) rotate(60deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes fade-playful {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Optional: Add subtle background pulse to sections */
+.animated-background {
+  animation: pulse-bg 10s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-bg {
+  from { background-color: var(--cream); }
+  to { background-color: #fffdfa; } /* Slightly lighter cream */
+}
+
+/* Keep existing keyframes for old animations if needed, or remove */
+/* @keyframes float { ... } */
+/* @keyframes fade { ... } */
+/* @keyframes flow { ... } */
+
+/* Design card hover effects (Keep as is) */
+.design-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.design-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.design-card img {
+  transition: transform 0.7s ease;
+}
+
+.design-card:hover img {
+  transform: scale(1.05);
+}
+
+.design-card .overlay {
+  transition: opacity 0.3s ease;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+}
+
+.design-card:hover .overlay {
+  opacity: 1;
+}
+
+
+
+/* Animated Arch Background */
+.animated-arch-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Ensure it stays behind content */
+}
+
+.arch-silhouette {
+  position: absolute;
+  bottom: -5%; /* Start slightly below */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Adjust size as needed */
+  max-width: 600px;
+  height: auto;
+  opacity: 0.05; /* Very subtle */
+  animation: floatArch 20s ease-in-out infinite alternate; 
+}
+
+.arch-silhouette.arch-2 {
+  left: 20%;
+  width: 60%;
+  max-width: 400px;
+  opacity: 0.03;
+  animation-delay: 5s;
+  animation-duration: 25s;
+}
+
+.arch-silhouette.arch-3 {
+  left: 80%;
+  width: 70%;
+  max-width: 500px;
+  opacity: 0.04;
+  animation-delay: 10s;
+  animation-duration: 18s;
+}
+
+@keyframes floatArch {
+  0% {
+    transform: translate(-50%, 5%);
+    opacity: 0.03;
+  }
+  100% {
+    transform: translate(-50%, -5%);
+    opacity: 0.06;
+  }
+}
+
+/* Adjust keyframes for other arches if needed for variation */
+
+
+
+
+/* Custom Background for Neel Page */
+.bg-neel-pattern {
+  background-color: #e3f2fd; /* Light blue base */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2390caf9' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Custom Background for Midnight Heritage Page */
+.bg-midnight-heritage-pattern {
+  background-color: #1a202c; /* Dark gray/blue base */
+  background-image: radial-gradient(#a0aec0 1px, transparent 1px), radial-gradient(#a0aec0 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-attachment: fixed; /* Keep pattern fixed during scroll */
+}
+
+/* Add subtle animation to Midnight Heritage background */
+@keyframes subtlePulse {
+  0% { background-color: #1a202c; }
+  50% { background-color: #2d3748; }
+  100% { background-color: #1a202c; }
+}
+
+.bg-midnight-heritage-pattern {
+  animation: subtlePulse 15s infinite ease-in-out;
+}
+
+/* Ensure project page content is above background patterns */
+#neel > div,
+#midnight-heritage > div {
+  position: relative;
+  z-index: 10;
+}
+
+/* Animated Arch Background for Majesty Arch */
+.animated-arch-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.arch-silhouette {
+  position: absolute;
+  bottom: -5%; /* Start slightly below */
+  opacity: 0.05; /* Very subtle */
+  width: 30%; /* Adjust size as needed */
+  height: auto;
+  animation: floatArch 20s infinite linear alternate;
+}
+
+.arch-1 { left: 5%; animation-duration: 22s; animation-delay: 0s; }
+.arch-2 { left: 35%; animation-duration: 18s; animation-delay: -5s; }
+.arch-3 { left: 65%; animation-duration: 25s; animation-delay: -10s; }
+
+@keyframes floatArch {
+  0% {
+    transform: translateY(0) rotate(-2deg);
+    opacity: 0.03;
+  }
+  100% {
+    transform: translateY(-15vh) rotate(3deg); /* Move up slightly */
+    opacity: 0.06;
+  }
+}
+
+/* Navbar Link Styling */
+.nav-link {
+  @apply text-sm uppercase tracking-wider text-stone-600 hover:text-stone-900 transition-colors duration-300;
+}
+

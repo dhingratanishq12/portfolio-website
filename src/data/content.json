@@ -1,0 +1,62 @@
+{
+  "general": {
+    "name": "Smriti Sharma",
+    "title": "Fashion Designer",
+    "tagline": "Traditional Luxury, Contemporary Style"
+  },
+  "about": {
+    "paragraphs": [
+      "Hello, I am Smriti Sharma, an aspiring fashion designer hailing from School Of Fashion Technology, Pune. Since my earliest memories, I've been inherently drawn to the world of fashion.",
+      "My passion lies in the art of surface embellishments, print design, and silhouette development. With every creation, I strive to infuse the richness of Indian couture, weaving together a tapestry of cultural essence with modern flair.",
+      "My designs serve as a canvas for storytelling, each piece intricately crafted to narrate tales of heritage and craftsmanship. I am driven by a deep desire to explore and experiment with various crafts and textiles, constantly pushing the boundaries of creativity."
+    ],
+    "photoPath": "/images/designer_photo.jpg"
+  },
+  "designs": {
+    "traditional": [
+      {
+        "id": 1,
+        "title": "Majesty Arch",
+        "description": "A collection featuring traditional Indian design elements with an elephant motif in ornate arch frames.",
+        "image": "/images/majesty_arch_placeholder.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Phool",
+        "description": "Designs inspired by floral elements, particularly focusing on detailed flower patterns.",
+        "image": "/images/phool_placeholder.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Indian Embroidery",
+        "description": "Work showcasing various traditional Indian embroidery techniques and their application in modern fashion.",
+        "image": "/images/embroidery_placeholder.jpg"
+      }
+    ],
+    "modern": [
+      {
+        "id": 4,
+        "title": "Midnight Heritage",
+        "description": "A collection that blends traditional Indian craftsmanship with contemporary design elements.",
+        "image": "/images/midnight_heritage_placeholder.jpg"
+      },
+      {
+        "id": 5,
+        "title": "The Watchful Eye",
+        "description": "A collection with motifs inspired by owl imagery, suggesting themes of wisdom and vigilance.",
+        "image": "/images/watchful_eye_placeholder.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Neel",
+        "description": "A project exploring blue color palettes and innovative dyeing techniques.",
+        "image": "/images/neel_placeholder.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "email": "contact@smritisharma.com",
+    "phone": "+1234567890",
+    "introText": "Interested in collaborating or learning more about my work? Feel free to reach out."
+  }
+}
