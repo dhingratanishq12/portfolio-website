@@ -106,9 +106,9 @@ function App() {
       title: "About Me", 
       description: "Fashion designer specializing in the fusion of traditional Indian craftsmanship with contemporary design aesthetics. My work celebrates the rich heritage of Indian textiles and techniques while embracing modern silhouettes and sensibilities.", 
       highlights: [
-        "Trained at National Institute of Fashion Technology",
-        "Specialized in traditional embroidery techniques",
-        "Featured in Vogue India's 'Designers to Watch'"
+        "Trained at School Of Fashion Technology",
+        "Specialized in Ethnic and Modernwear",
+        "Worked in Lakme Fashion Week and Bridal Asia'"
       ] 
     },
     traditional: traditionalProjects,
