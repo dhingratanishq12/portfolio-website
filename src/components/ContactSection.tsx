@@ -13,7 +13,7 @@ interface ContactSectionProps {
 
 const ContactSection: React.FC<ContactSectionProps> = ({ content }) => {
   // Formspree endpoint - Will need to be replaced with the actual ID after Formspree account setup
-  const formspreeEndpoint = "https://formspree.io/f/xeqyqzgj"; // Using a temporary ID that will need to be replaced
+  const formspreeEndpoint = "https://formspree.io/f/xnnvjjpz"; // Using a temporary ID that will need to be replaced
 
   return (
     <section id="contact" className="py-20 px-6 md:px-12 bg-[#f5f0e5]">
