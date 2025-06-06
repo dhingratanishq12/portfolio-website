@@ -118,7 +118,7 @@ function App() {
       phone: "8005789470", 
       instagram: "https://www.instagram.com/smriti_sharma130?igsh=azdoOXB5Z3dhbTh2", 
       linkedin: "https://www.linkedin.com/in/smriti-sharma-b9531a363", // Added LinkedIn
-      address: "Studio 42, Fashion District, New Delhi, India", 
+      address: "Pushkar, Rajasthan", 
       introText: "I'd love to hear from you about custom designs, collaborations, or any questions about my work."
     }
   });
